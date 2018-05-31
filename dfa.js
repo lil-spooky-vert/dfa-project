@@ -5,7 +5,7 @@ const isPlusMinus = (x) => x === '+' || x === '-';
 const A = (char) => isDigit(char) ? D : isDot(char) ? B : isPlusMinus(char) ? C : dead;
 const B = (char) => isDigit(char) ? F : dead;
 const C = (char) => isDigit(char) ? D : isDot(char) ? B : dead;
-const D = (char) => isDigit(char) ? D : isDot(char) ? E : dead;
+const D = (char) => isDigit(char) ? D : isDot(char) ? E : isE(char) ? G : dead;
 const E = (char) => isDigit(char) ? E : isE(char) ? G : dead;
 const F = (char) => isDigit(char) ? F : isE(char) ? G : dead;
 const G = (char) => isDigit(char) ? H : isPlusMinus(char) ? I : dead;
